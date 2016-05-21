@@ -7,14 +7,14 @@
 len_per_letter=3.3;
 
 module makeText(textIn, depth, pedestal=0){
-    base_width=len_per_letter*len(textIn); 
+    
     linear_extrude(height=depth,center = true, convexity = 10, slices = 19, scale = 1.0) text(textIn,halign="center",size=3.5,font="Helvetica:style=Bold");
     if (pedestal){
-        makePedestal(base_width, depth);
+        makePedestal(textIn, depth);
     }
 }
-module makePedestal(base_width, depth){
-    
+module makePedestal(textIn, depth){
+    base_width=len_per_letter*len(textIn); 
     difference(){
         translate([0,-2.5,0]) cube([base_width,5,4], center=true);
         rotate([40,0,0]) translate([0,-2.5,4]) cube([base_width+1,7,4], center=true);
