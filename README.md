@@ -13,5 +13,5 @@ writeText(0,0,0, "SK", pedestal=1);
 
 Produces:
 
-[![Foo](img/example.png)](https://github.com/suyashkumar/scad-text/blob/master/example.stl)
+[![Foo](img/example.png)](https://github.com/suyashkumar/scad-text/blob/master/example/example.stl)
 
